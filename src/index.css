@@ -2863,8 +2863,31 @@ header.nav {
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
-    padding: 120px 0 50px;
-    gap: 40px;
+    padding: 115px 0 45px;
+    gap: 36px;
+    text-align: center;
+    align-items: start;
+    align-content: start;
+  }
+  .hero-copy {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .hero-greeting-pill,
+  .social-pills-row {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-main-title,
+  .hero-sub {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions {
+    justify-content: center;
   }
   .hero-text-wrapper {
     order: 1;
@@ -2882,6 +2905,38 @@ header.nav {
   }
   .about-content-col {
     order: 1;
+    align-items: center;
+    text-align: center;
+  }
+  .about-pill-tag {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-headline {
+    text-align: center;
+  }
+  .about-text-content {
+    text-align: center;
+  }
+  .about-focus-quote {
+    text-align: center;
+    border-left: none;
+    border-top: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-stats-grid {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-cta-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .about-visual-col {
     order: 2;
@@ -2889,6 +2944,16 @@ header.nav {
   .about-avatar-card {
     max-width: 380px;
     margin: 0 auto;
+  }
+  .section-title,
+  .section-lede,
+  .eyebrow,
+  .services-header,
+  .tech-header,
+  .why-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -2940,6 +3005,8 @@ header.nav {
   }
   .footer-logo {
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .footer-tagline {
     margin: 0 auto;
@@ -2954,9 +3021,11 @@ header.nav {
   }
   .footer-col {
     text-align: center;
+    align-items: center;
   }
   .footer-col ul li a {
     justify-content: center;
+    text-align: center;
   }
 }
 
@@ -2970,7 +3039,7 @@ header.nav {
   }
   .tech-filter-bar {
     gap: 8px;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     overflow-x: visible;
     padding-bottom: 0;
@@ -2988,45 +3057,74 @@ header.nav {
   .contact-form-card {
     padding: 32px 24px;
     border-radius: 24px;
+    text-align: center;
   }
   .contact-info-dark-card {
     padding: 32px 24px;
     border-radius: 24px;
+    text-align: center;
   }
 }
 
 /* Phones & Small Screens (480px - 640px) */
 @media (max-width: 640px) {
   .container {
-    padding: 0 16px;
+    padding: 0 20px;
   }
   .nav-cta .btn-primary {
     display: none; /* Hide CTA button in header pill on mobile so Logo, Theme button & Hamburger fit perfectly */
   }
   .hero {
-    padding: 105px 0 40px;
-    gap: 32px;
+    padding: 110px 0 32px;
+    gap: 28px;
+    text-align: center;
+    align-items: start;
+    align-content: start;
+  }
+  .hero-copy {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .hero-greeting-pill {
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-main-title {
     font-size: clamp(1.65rem, 6vw, 2.2rem);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-sub {
     font-size: 0.96rem;
     margin-bottom: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-actions {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     gap: 12px;
   }
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
+    text-align: center;
   }
   .social-pills-row {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     gap: 10px;
-    margin-bottom: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   .social-pill-btn {
     width: 40px;
@@ -3052,18 +3150,73 @@ header.nav {
     bottom: 12px;
     right: 0px;
   }
+
+  /* Grid Centering & Card Alignments */
   .grid-3 {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .service-card {
+    text-align: center;
+    align-items: center;
+  }
+  .service-card-top {
+    justify-content: center;
+    width: 100%;
+  }
+  .service-icon-badge {
+    margin: 0 auto;
+  }
+  .service-card-title,
+  .service-card-desc {
+    text-align: center;
+  }
+
   .why-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  .why-card {
+    text-align: center;
+    align-items: center;
+  }
+  .why-card-top {
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+  }
+  .why-icon-badge {
+    margin: 0 auto;
+  }
+  .why-card-title,
+  .why-card-desc {
+    text-align: center;
+  }
+  .why-card-check {
+    justify-content: center;
+    width: 100%;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
     gap: 18px;
   }
+  .project-card {
+    text-align: center;
+  }
+  .project-body {
+    text-align: center;
+    align-items: center;
+  }
+  .project-body h3,
+  .project-body p {
+    text-align: center;
+  }
+  .project-links {
+    justify-content: center;
+    width: 100%;
+  }
+
   .process-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -3072,6 +3225,22 @@ header.nav {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
+  .tech-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .tech-card-icon {
+    margin: 0 auto 12px auto;
+  }
+  .tech-card-title,
+  .tech-card-cat {
+    text-align: center;
+  }
+
   .about-stats-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 6px;
@@ -3079,6 +3248,7 @@ header.nav {
   .about-stat-card {
     padding: 12px 4px;
     border-radius: 12px;
+    text-align: center;
   }
   .about-stat-card .stat-number {
     font-size: 1.25rem;
@@ -3101,30 +3271,70 @@ header.nav {
   .get-in-touch-btn {
     justify-content: center;
   }
+
+  /* Contact Section Mobile Centering & Equal Margins */
+  .contact-split-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
   .contact-form-row {
     grid-template-columns: 1fr;
     gap: 16px;
   }
   .contact-form-card, .contact-info-dark-card {
-    padding: 22px 16px;
+    padding: 24px 18px;
     border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  .orange-accent-bar {
+    margin-left: auto;
+    margin-right: auto;
   }
   .contact-card-main-title, .help-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-card-sub, .help-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-group {
+    text-align: center;
+  }
+  .form-group label {
+    text-align: center;
+    display: block;
+  }
+  .form-group input, .form-group textarea {
+    text-align: center;
   }
   .phone-input-group {
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    justify-content: center;
   }
   .phone-prefix-select {
     min-width: 90px;
     padding: 12px 10px !important;
     font-size: 0.88rem;
+    text-align: center;
   }
   #form-phone {
     padding: 12px 12px !important;
     font-size: 0.88rem;
+    text-align: center;
   }
   .contact-form-footer {
     flex-direction: column;
@@ -3139,14 +3349,54 @@ header.nav {
     padding: 12px 14px;
     gap: 12px;
     border-radius: 14px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
   }
   .info-box-icon {
     width: 40px;
     height: 40px;
+    margin: 0 auto;
+  }
+  .info-box-content {
+    text-align: center;
+    align-items: center;
+    min-width: 0;
+    width: 100%;
   }
   .info-box-value {
-    font-size: 0.9rem;
+    font-size: clamp(0.78rem, 3.8vw, 0.92rem);
+    text-align: center;
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: anywhere;
   }
+  .connect-social-section {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .connect-label {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .social-circle-buttons {
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-social-icons {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .footer-nav-columns {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -3171,9 +3421,33 @@ header.nav {
 
 /* Extra Small Phones (< 480px) */
 @media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .hero {
+    padding: 100px 0 24px;
+    gap: 22px;
+    align-items: start;
+    align-content: start;
+  }
+  .hero-greeting-pill {
+    font-size: 0.78rem !important;
+    padding: 5px 12px !important;
+  }
+  .hero-main-title {
+    font-size: clamp(1.48rem, 6.5vw, 1.85rem);
+    line-height: 1.2;
+    text-align: center;
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
   .tech-filter-bar {
     gap: 6px;
     margin-bottom: 20px;
+    justify-content: center;
   }
   .tech-filter-btn {
     padding: 6px 11px;
@@ -3191,6 +3465,7 @@ header.nav {
   .tech-card {
     padding: 20px 10px 16px;
     border-radius: 16px;
+    text-align: center;
   }
   .tech-card-icon {
     width: 44px;
@@ -3199,9 +3474,11 @@ header.nav {
   }
   .tech-card-title {
     font-size: 0.92rem !important;
+    text-align: center;
   }
   .tech-card-cat {
     font-size: 0.65rem !important;
+    text-align: center;
   }
   .avatar-floating-badge {
     bottom: 12px;
@@ -3214,16 +3491,20 @@ header.nav {
   .info-box-value {
     font-size: 0.82rem;
     word-break: break-all;
+    text-align: center;
   }
   .about-focus-quote {
     font-size: 0.98rem !important;
-    padding-left: 12px;
+    padding-left: 0;
+    text-align: center;
   }
   .section-title {
     font-size: 1.55rem;
+    text-align: center;
   }
   .section-lede {
     font-size: 0.95rem;
     margin-bottom: 30px;
+    text-align: center;
   }
 }
