@@ -1,11 +1,45 @@
 import React from 'react';
-import { MessageSquare, Download, Sparkles, Code2, Laptop } from 'lucide-react';
+import { MessageSquare, Download } from 'lucide-react';
 import { avatarImg } from '../data/constants';
 
 export default function HeroSection() {
   return (
     <section className="hero container">
       <div className="hero-copy">
+        {/* Intro Greeting Pill */}
+        <div
+          className="hero-greeting-pill"
+          style={{
+            marginBottom: '12px',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '6px 14px',
+            borderRadius: '9999px',
+            background: 'var(--accent-light)',
+            border: '1px solid rgba(255, 122, 0, 0.2)',
+            fontSize: '0.85rem',
+            fontFamily: 'var(--font-mono)',
+            fontWeight: 600,
+            color: 'var(--accent)',
+            maxWidth: '100%',
+            flexWrap: 'wrap'
+          }}
+        >
+          <span
+            style={{
+              width: '8px',
+              height: '8px',
+              background: 'var(--accent)',
+              borderRadius: '50%',
+              display: 'inline-block',
+              boxShadow: '0 0 8px var(--accent)',
+              flexShrink: 0
+            }}
+          ></span>
+          Hi, I'm <span className="accent-gradient" style={{ fontWeight: 800 }}>Khalil Ahmad</span> — Full-Stack &amp; AI Engineer
+        </div>
+
         {/* Colorful Social Media Badges */}
         <div className="social-pills-row">
           <a
@@ -63,39 +97,6 @@ export default function HeroSection() {
           </a>
         </div>
 
-        <div
-          className="hero-greeting-pill"
-          style={{
-            marginBottom: '14px',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '6px 14px',
-            borderRadius: '9999px',
-            background: 'var(--accent-light)',
-            border: '1px solid rgba(255, 122, 0, 0.2)',
-            fontSize: '0.85rem',
-            fontFamily: 'var(--font-mono)',
-            fontWeight: 600,
-            color: 'var(--accent)',
-            maxWidth: '100%',
-            flexWrap: 'wrap'
-          }}
-        >
-          <span
-            style={{
-              width: '8px',
-              height: '8px',
-              background: 'var(--accent)',
-              borderRadius: '50%',
-              display: 'inline-block',
-              boxShadow: '0 0 8px var(--accent)',
-              flexShrink: 0
-            }}
-          ></span>
-          Hi, I'm <span className="accent-gradient" style={{ fontWeight: 800 }}>Khalil Ahmad</span> — Full-Stack &amp; AI Engineer
-        </div>
-
         <h1 className="hero-main-title">
           I Build Websites, Web Apps &amp; AI Solutions
         </h1>
@@ -119,7 +120,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Right Column: Avatar Card & Floating Tech Badges */}
+      {/* Right Column: Avatar Card */}
       <div className="hero-visual-wrapper">
         <div className="hero-avatar-card">
           <div className="card-ambient-glow"></div>
@@ -131,21 +132,6 @@ export default function HeroSection() {
             className="hero-avatar-img"
             referrerPolicy="no-referrer"
           />
-
-          <div className="floating-badge badge-top-left">
-            <Sparkles size={18} className="text-orange-500" />
-            <span>Hi! I'm Khalil</span>
-          </div>
-
-          <div className="floating-badge badge-top-right">
-            <Code2 size={18} className="text-amber-500" />
-            <span>React &amp; Next.js</span>
-          </div>
-
-          <div className="floating-badge badge-bottom-right">
-            <Laptop size={18} className="text-teal-500" />
-            <span>AI Solutions</span>
-          </div>
         </div>
       </div>
     </section>

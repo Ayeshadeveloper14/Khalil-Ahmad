@@ -12,20 +12,28 @@ import Footer from './components/Footer';
 import WhatsAppFab from './components/WhatsAppFab';
 
 export default function App() {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved !== null) {
+      return saved === 'dark';
+    }
+    return false; // Default to Light Mode on first load
+  });
   const [activeSection, setActiveSection] = useState('top');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTechCategory, setActiveTechCategory] = useState('all');
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
-  // Apply or remove theme class on root body element
+  // Apply or remove theme class on root body element & persist preference
   useEffect(() => {
     if (darkTheme) {
       document.documentElement.classList.add('dark-theme');
       document.documentElement.classList.remove('light-theme');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.add('light-theme');
       document.documentElement.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
     }
   }, [darkTheme]);
 
